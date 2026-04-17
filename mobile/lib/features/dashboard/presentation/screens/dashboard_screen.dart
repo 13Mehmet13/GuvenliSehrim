@@ -83,28 +83,34 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> with SingleTi
                 ),
               ),
               actions: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 16),
-                  child: Center(
-                    child: GlassCard(
-                      borderRadius: 12,
-                      blur: 10,
-                      child: IconButton(
-                        key: WidgetKeys.dashboardRefresh,
-                        icon: const Icon(Icons.refresh_rounded),
-                        onPressed: () {
-                          _animController.reset();
-                          _animController.forward();
-                          ref.invalidate(havaProvider);
-                          ref.invalidate(namazProvider);
-                          ref.invalidate(aqiProvider);
-                          ref.invalidate(dovizProvider);
-                          ref.invalidate(depremProvider);
-                        },
-                      ),
-                    ),
+                GlassCard(
+                  borderRadius: 12,
+                  blur: 10,
+                  child: IconButton(
+                    key: WidgetKeys.navSettings,
+                    icon: const Icon(Icons.settings_rounded),
+                    onPressed: () => Navigator.pushNamed(context, '/ayarlar'),
                   ),
                 ),
+                const SizedBox(width: 8),
+                GlassCard(
+                  borderRadius: 12,
+                  blur: 10,
+                  child: IconButton(
+                    key: WidgetKeys.dashboardRefresh,
+                    icon: const Icon(Icons.refresh_rounded),
+                    onPressed: () {
+                      _animController.reset();
+                      _animController.forward();
+                      ref.invalidate(havaProvider);
+                      ref.invalidate(namazProvider);
+                      ref.invalidate(aqiProvider);
+                      ref.invalidate(dovizProvider);
+                      ref.invalidate(depremProvider);
+                    },
+                  ),
+                ),
+                const SizedBox(width: 16),
               ],
             ),
             SliverToBoxAdapter(
