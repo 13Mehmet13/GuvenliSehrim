@@ -1,0 +1,30 @@
+{
+  "name": "guvenli-sehrim-backend",
+  "version": "1.0.0",
+  "description": "Güvenli Şehrim API Gateway",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "safe-city",
+    "api-gateway",
+    "turkey"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
+    "node-cron": "^3.0.3",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
